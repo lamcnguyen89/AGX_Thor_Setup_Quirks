@@ -16,7 +16,7 @@ ip link
 3. Set up a static IP using NetworkManager (`nmcli`) or GUI settings. For command line:
 
 ```bash
-sudo nmcli con add type ethernet ifname eth0 con-name DirectEthernet ip4 192.168.50.2/24
+sudo nmcli con add type ethernet ifname enP2p1s0 con-name DirectEthernet ip4 192.168.1.14/24
 sudo nmcli con up DirectEthernet
 
 ```
@@ -35,7 +35,7 @@ Assign an IP address in the **192.168.50.x** range (such as `192.168.50.1`) to y
 * **On Linux client (`nmcli`):**
 
 ```bash
-sudo nmcli con add type ethernet ifname <eth_interface> con-name DirectToHost ip4 192.168.50.1/24
+sudo nmcli con add type ethernet ifname enP2p1S0 con-name DirectToHost ip4 192.168.1.11/24
 sudo nmcli con up DirectToHost
 
 ```
@@ -71,8 +71,8 @@ To avoid typing the IP every time, append an alias entry to your client's `~/.ss
 
 ```text
 Host host-direct
-    HostName 192.168.50.2
-    User username
+    HostName 192.168.1.14
+    User malneyugnfl
 
 ```
 
